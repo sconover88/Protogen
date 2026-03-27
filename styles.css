@@ -4,7 +4,7 @@ html, body {
     margin: 0;
 }
 body {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: purple;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +17,10 @@ body {
 }
 
 h1 {
+    color: #000;
+}
+
+p {
     color: #000;
 }
 
