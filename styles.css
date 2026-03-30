@@ -6,10 +6,12 @@ html, body {
 body {
     background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    color: #000;
+    min-height: 100vh;
 }
 
 body::after {
@@ -98,16 +100,90 @@ body::after {
     }
 }
 
-.container {
+/* Weather Widget Styles */
+.weather-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    min-height: 250px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-loading {
+    text-align: center;
+    color: #666;
+}
+
+.weather-content h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.weather-temp {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0066cc;
+    margin: 10px 0;
+}
+
+.weather-description {
+    color: #000;
+    margin: 5px 0;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.weather-detail {
+    background: linear-gradient(45deg, #0000FF, #800080);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.detail-label {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.detail-value {
+    font-weight: bold;
+    color: white;
+}
+
+.weather-error {
+    color: #d32f2f;
     text-align: center;
 }
 
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 h1 {
-    color: #fff;
+    color: #000;
 }
 
 p {
-    color: #fff;
+    color: #000;
 }
 
 .profile-photo {
@@ -139,13 +215,17 @@ p {
 .contact-button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: rgba(255,255,255,0.8);
-    color: #333;
+    background: linear-gradient(45deg, #0000FF, #800080);
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
 }
 
 .contact-button:hover {
-    background-color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
